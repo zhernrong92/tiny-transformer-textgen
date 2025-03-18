@@ -1,28 +1,5 @@
 # Overview
-A self-learning project to understand how to build a Transformer model from scratch, train it, and deploy it using Flask. 
-
-Includes a custom-trained model and a pretrained GPT-2 model for comparison. Fully Dockerized for easy deployment.
-
-
-## 🚀 Features
-
-- Simple Transformer model implemented in PyTorch.
-- Trains on a small dataset.
-- Serves text generation via a Flask API.
-- Dockerized for easy deployment.
-
-
-## 📂 Project Structure
-
-```
-├── model.py            # Defines the Tiny Transformer model
-├── train.py            # Trains the model and saves weights
-├── app.py              # Serves the model as an API
-├── requirements.txt    # Dependencies
-├── Dockerfile          # Docker setup
-├── README.md           # This documentation
-└── trained_transformer.pth  # Trained model weights (after training)
-```
+This project is a self-learning experiment to explore how LLMs work, from training to serving. It involves building and training a lightweight Transformer model using PyTorch, alongside a comparison with a pretrained GPT-2 model.  Instead of using a high-performance inference engine like TGI (Text Generation Inference), this project serves the model via FastAPI for lightweight and efficient deployment. The goal is to understand key LLM components—tokenization, training, and inference—while keeping the implementation simple. 
 
 
 ## 🛠️ Setup and Installation
@@ -47,7 +24,7 @@ This will generate the `trained_transformer.pth` file.
 
 ### **3️⃣ Run the API Server**
 
-Start the Flask API to serve text generation:
+Start the FastAPI to serve text generation:
 
 ```bash
 python app.py
